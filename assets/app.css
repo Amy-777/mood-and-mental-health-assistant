@@ -1,0 +1,277 @@
+:root {
+    --ink: #20342e;
+    --muted: #567068;
+    --line: #d7e3de;
+    --surface: rgba(255, 255, 255, 0.88);
+    --surface-strong: #ffffff;
+    --primary: #2f7d77;
+    --primary-strong: #1f615c;
+    --accent: #da6b4d;
+    --soft-green: #eaf5f2;
+    --soft-peach: #fff0eb;
+    --soft-sage: #eef5e8;
+    --shadow: 0 24px 60px rgba(24, 49, 42, 0.08);
+}
+
+.stApp {
+    background:
+        radial-gradient(circle at top left, rgba(47, 125, 119, 0.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(218, 107, 77, 0.12), transparent 24%),
+        linear-gradient(180deg, #f6faf8 0%, #edf3f0 100%);
+    color: var(--ink);
+}
+
+[data-testid="stHeader"] {
+    background: transparent;
+}
+
+header[data-testid="stHeader"],
+[data-testid="stToolbar"],
+[data-testid="stStatusWidget"],
+[data-testid="stDecoration"] {
+    display: none;
+}
+
+.stApp [data-testid="block-container"] {
+    padding-top: 1.35rem;
+}
+
+[data-testid="stSidebar"] {
+    background: rgba(239, 246, 242, 0.88);
+    border-right: 1px solid var(--line);
+}
+
+[data-testid="stSidebar"] .stRadio > div {
+    gap: 0.45rem;
+}
+
+[data-testid="stSidebar"] .stRadio label {
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.74);
+    border: 1px solid var(--line);
+    padding: 0.55rem 0.7rem;
+}
+
+[data-testid="collapsedControl"],
+footer,
+#MainMenu {
+    display: none;
+}
+
+.modebar {
+    display: none !important;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+}
+
+.hero-panel,
+.auth-card,
+.insight-card,
+.journal-card,
+.sidebar-profile,
+.sidebar-note {
+    background: var(--surface);
+    border: 1px solid rgba(215, 227, 222, 0.92);
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+}
+
+.hero-panel {
+    padding: 1.4rem;
+}
+
+.hero-copy h1,
+.page-header h1 {
+    margin: 0;
+    color: var(--ink);
+    line-height: 1.04;
+}
+
+.hero-copy h1 {
+    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    margin-bottom: 0.75rem;
+}
+
+.hero-copy p,
+.page-header p,
+.feature-card span,
+.sidebar-profile p,
+.sidebar-note span,
+.status-banner span,
+.insight-card p,
+.journal-card p,
+.mini-affirmation p {
+    color: var(--muted);
+    line-height: 1.65;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+    margin-top: 1.1rem;
+}
+
+.feature-card,
+.mini-affirmation {
+    display: grid;
+    gap: 0.35rem;
+    padding: 1rem 1rem 0.95rem;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.68);
+    border: 1px solid var(--line);
+}
+
+.feature-card strong,
+.mini-affirmation strong {
+    color: var(--ink);
+}
+
+.auth-card {
+    padding: 1.2rem;
+    margin-top: 2.1rem;
+}
+
+.page-header {
+    margin-bottom: 1.4rem;
+}
+
+.page-header h1 {
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
+    margin-bottom: 0.45rem;
+}
+
+.sidebar-profile {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sidebar-profile h3 {
+    margin: 0 0 0.25rem;
+}
+
+.sidebar-profile p {
+    margin: 0;
+    font-size: 0.93rem;
+}
+
+.sidebar-note {
+    display: grid;
+    gap: 0.25rem;
+    padding: 0.9rem 1rem;
+    margin-top: 1rem;
+}
+
+.status-banner {
+    display: grid;
+    gap: 0.2rem;
+    padding: 1rem 1.05rem;
+    border-radius: 16px;
+    margin: 0 0 1.15rem;
+    border: 1px solid transparent;
+}
+
+.status-high {
+    background: #fff0eb;
+    border-color: rgba(218, 107, 77, 0.18);
+}
+
+.status-watch {
+    background: #fff8ed;
+    border-color: rgba(172, 111, 44, 0.18);
+}
+
+.status-steady,
+.status-starting {
+    background: #eaf5f2;
+    border-color: rgba(47, 125, 119, 0.18);
+}
+
+.insight-card {
+    padding: 1.15rem;
+    margin-bottom: 1rem;
+}
+
+.insight-card h3 {
+    margin: 0 0 0.4rem;
+    color: var(--ink);
+    line-height: 1.35;
+}
+
+.journal-card {
+    padding: 1.1rem 1.2rem;
+}
+
+.journal-card p {
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+.stMetric {
+    background: rgba(255, 255, 255, 0.78);
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    padding: 0.55rem 0.7rem;
+}
+
+.stMetric [data-testid="stMetricLabel"] {
+    color: var(--muted);
+}
+
+.stTabs [data-baseweb="tab-list"] {
+    gap: 0.4rem;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.stTabs [aria-selected="true"] {
+    background: var(--soft-green);
+}
+
+.stButton > button,
+.stDownloadButton > button {
+    border-radius: 12px;
+    border: 1px solid transparent;
+    background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+    color: #ffffff;
+    font-weight: 700;
+    min-height: 46px;
+}
+
+.stDownloadButton > button {
+    background: linear-gradient(135deg, #577a6f, #2f7d77);
+}
+
+.stTextInput input,
+.stTextArea textarea,
+.stSelectbox [data-baseweb="select"] > div,
+.stNumberInput input,
+.stDateInput input {
+    border-radius: 12px !important;
+    border-color: var(--line) !important;
+    background: rgba(255, 255, 255, 0.92) !important;
+}
+
+.stSlider [data-baseweb="slider"] > div > div {
+    background: var(--primary) !important;
+}
+
+@media (max-width: 900px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
