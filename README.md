@@ -1,3 +1,4 @@
+HEAD
 # Mood and Mental Health Assistant
 
 A polished Streamlit application for daily mood tracking, supportive reflection, trend analysis, affirmations, and optional AI-assisted conversation. The app is designed as a private wellbeing workspace with local SQLite storage, daily check-ins, a supportive companion, reminder settings, data export, and a safety-aware interaction model.
@@ -58,27 +59,3 @@ streamlit run streamlit_app.py
 
 ## Optional OpenAI Integration
 
-The app works fully without an API key by using its built-in supportive fallback mode.
-
-To enable API-backed companion replies:
-
-1. Copy [.env.example](/Users/amisharai/mood-and-mental-health-assistant/.env.example) values into your environment.
-2. Create a local `.env` file or export the variables in your shell.
-3. Set `OPENAI_API_KEY`.
-4. Optionally set `OPENAI_MODEL`. The default in this project is `gpt-5.4-mini`.
-
-The integration uses the OpenAI Responses API pattern from the official docs:
-
-- [Models](https://developers.openai.com/api/docs/models)
-- [Quickstart for Python](https://developers.openai.com/api/docs/quickstart?lang=python)
-- [Text generation with the Responses API](https://developers.openai.com/api/docs/guides/text?api-mode=responses&lang=python)
-
-## Run Tests
-
-```bash
-python3 -m unittest discover -s tests
-```
-
-## Safety Note
-
-This app is built for emotional support, self-reflection, and habit awareness. It is not a medical device, therapist, or crisis service. Any market-facing deployment should add region-specific crisis resources, a reviewed privacy policy, explicit terms, observability, and a human escalation pathway before production use.
